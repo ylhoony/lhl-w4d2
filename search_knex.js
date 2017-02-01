@@ -3,8 +3,8 @@ const db = require('./db');
 
 // const settings = require("./settings");
 
-const settings = require("./settings2");
-const knex = require('knex')(settings);
+const settings = require("./knexfile");
+const knex = require('knex')(settings.development);
 
 module.exports = {
 
