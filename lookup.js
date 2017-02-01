@@ -1,8 +1,13 @@
 const input = process.argv[2];
 
-const lookupfn = require('./lookup_fn');
 
-lookupfn.getList(input);
+// pg function call
+// const lookupfn = require('./lookup_fn');
+// lookupfn.getList(input);
+
+//KNEX
+const search_knex = require('./search_knex');
+search_knex.getList(input);
 
 // const pg = require("pg");
 // const settings = require("./settings");
