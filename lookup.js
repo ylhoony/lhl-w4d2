@@ -1,13 +1,20 @@
-const input = process.argv[2];
+const input = process.argv.slice(2);
 
 
 // pg function call
 // const lookupfn = require('./lookup_fn');
 // lookupfn.getList(input);
 
-//KNEX
-const search_knex = require('./search_knex');
-search_knex.getList(input);
+//KNEX - lookup/search
+// const search_knex = require('./search_knex');
+// search_knex.getList(input[0]);
+
+//KNEX - lookup/search
+const add_person = require('./add_person');
+add_person.addPerson(input);
+
+
+
 
 // const pg = require("pg");
 // const settings = require("./settings");

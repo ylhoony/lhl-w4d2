@@ -17,10 +17,10 @@ module.exports = {
       for (let item in result) {
       console.log('- ' + result[item].id + ": " + result[item].first_name + " " + result[item].last_name + ', born ' + result[item].birthdate);
       }
-    }).catch((err) => {
-      console.error(err);
     }).finally(() => {
       knex.destroy();
+    }).catch((err) => {
+      console.error(err);
     });
   }
 }
